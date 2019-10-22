@@ -3,23 +3,22 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title= title
+  title Pokemon!
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
   link(rel='stylesheet' href='styles.css')
-  // adding the bootstrap for a card in html
 .card
   #sprite
-    img(src='International_Pokémon_logo.svg.png' alt='pokemon logo' id='logo')
+    img#logo(src='International_Pokémon_logo.svg.png' alt='pokemon logo')
   .card-body
     h5.card-title(align='center') Choose a pokemon!
     p(align='center')
     #buttons(align='center')
-      a.btn.btn-primary(href='http://localhost:3000/gible') Gible
-      a.btn.btn-primary(href='http://localhost:3000/cubone') Cubone
-      a.btn.btn-primary(href='http://localhost:3000/pikachu') Pikachu
-      a.btn.btn-primary(href='http://localhost:3000/squirtle') Squirtle
-      #search.topnav(align='center')
-    form
-     input#searchBar(type='text' placeholder='Search...')
-     a.btn.btn-primary(href='http://localhost:3000/user') Submit 
-     sript(src='user.js')
+      a.btn.btn-primary(href='/gible') Gible
+      a.btn.btn-primary(href='/cubone') Cubone
+      a.btn.btn-primary(href='/pikachu') Pikachu
+      a.btn.btn-primary(href='/squirtle') Squirtle
+    #search.topnav(align='center')
+      form
+        input#searchBar(type='text' placeholder='Search...')
+        button#submit(type='button') Submit
+  script(src='pokemon.js')
