@@ -120,7 +120,8 @@ setTimeout(function()  {
 // this function runs when the submit button for the search bar is clicked 
 (document.getElementById("submit").onclick) = async () => {
     // sets this variable to the value of the input box 
-    let userPoke = document.getElementById("searchBar").value;
+    let userPoke = document.getElementById("searchBar").value.toLowerCase();
+    
 
     // checking if there is any text in the box
     if (userPoke === "") {
