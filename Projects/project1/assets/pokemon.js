@@ -117,9 +117,8 @@ setTimeout(function()  {
 } , 1);
 
 
-// Event listeners for the button being clicked or the form being submitted 
+// Event listeners for the button being clicked, not just form being submitted 
 document.getElementById("submit").addEventListener("click", searchFunction, false);
-// document.querySelector("form").addEventListener("submit", searchFunction, false);
 
 
 // this function runs when the submit button for the search bar is clicked
@@ -219,3 +218,5 @@ async function searchFunction() {
         }
     }
 }
+
+// goes back to the home page when the back button on the keyboard is pressed 
