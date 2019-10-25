@@ -117,8 +117,13 @@ setTimeout(function()  {
 } , 1);
 
 
-// this function runs when the submit button for the search bar is clicked 
-(document.getElementById("submit").onclick) = async () => {
+// Event listeners for the button being clicked or the form being submitted 
+document.getElementById("submit").addEventListener("click", searchFunction, false);
+// document.querySelector("form").addEventListener("submit", searchFunction, false);
+
+
+// this function runs when the submit button for the search bar is clicked
+async function searchFunction() {
     // sets this variable to the value of the input box 
     let userPoke = document.getElementById("searchBar").value.toLowerCase();
     
