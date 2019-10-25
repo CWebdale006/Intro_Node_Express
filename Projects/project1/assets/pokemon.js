@@ -117,10 +117,15 @@ setTimeout(function()  {
 } , 1);
 
 
-// this function runs when the submit button for the search bar is clicked 
-(document.getElementById("submit").onclick) = async () => {
-    // sets this variable to the value of the input box 
+// Event listeners for the button being clicked, not just form being submitted 
+document.getElementById("submit").addEventListener("click", searchFunction, false);
+
+
+// this function runs when the submit button for the search bar is clicked
+async function searchFunction() {
+    // sets this variable to the value of the input box, works with upercase letters and spaces 
     let userPoke = document.getElementById("searchBar").value.toLowerCase();
+    userPoke = userPoke.replace(/\s+/g, '');
     
 
     // checking if there is any text in the box
@@ -208,9 +213,13 @@ setTimeout(function()  {
         } else if (response.status === 404) {
             // this runs if the fetch request using the text box text doesn't work 
             alert("Please enter a valid pokemon name");
+            let searchBar = document.getElementById("searchBar");
+            searchBar.select();
         } else {
             // just a failsafe, if something weird happens 
             alert("We don't know what happened, please refresh and try again");
         }
     }
 }
+
+// goes back to the home page when the back button on the keyboard is pressed 
