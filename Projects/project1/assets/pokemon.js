@@ -123,8 +123,9 @@ document.getElementById("submit").addEventListener("click", searchFunction, fals
 
 // this function runs when the submit button for the search bar is clicked
 async function searchFunction() {
-    // sets this variable to the value of the input box 
+    // sets this variable to the value of the input box, works with upercase letters and spaces 
     let userPoke = document.getElementById("searchBar").value.toLowerCase();
+    userPoke = userPoke.replace(/\s+/g, '');
     
 
     // checking if there is any text in the box
@@ -212,6 +213,8 @@ async function searchFunction() {
         } else if (response.status === 404) {
             // this runs if the fetch request using the text box text doesn't work 
             alert("Please enter a valid pokemon name");
+            let searchBar = document.getElementById("searchBar");
+            searchBar.select();
         } else {
             // just a failsafe, if something weird happens 
             alert("We don't know what happened, please refresh and try again");
