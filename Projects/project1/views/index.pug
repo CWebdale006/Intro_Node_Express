@@ -18,7 +18,7 @@ head
       a.btn.btn-primary(href='/pikachu') Pikachu
       a.btn.btn-primary(href='/squirtle') Squirtle
     #search.topnav(align='center')
-      form
+      form(onsubmit='searchFunction(); return false')
         input#searchBar(type='text' placeholder='Search...')
         button#submit(type='button') Submit
   script(src='pokemon.js')
