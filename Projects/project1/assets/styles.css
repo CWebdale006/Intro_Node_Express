@@ -71,6 +71,9 @@ img {
 /*changes the size of the pokemon sprites*/
 #sprite img{
   width: 12vw;
+  animation-name: exit;
+  animation-duration: 2s;
+  animation-delay: 1s;
 }
 
 /* Layering the pokemon sprite and the open pokeball*/
@@ -83,6 +86,14 @@ img {
   left: 9vw;
   top: 6.5vw;
 }
+
+/* creating the keyframe for the pokemon to "come out" of the pokeball */
+@keyframes exit {
+  from {width: 0vw}
+  to {width: 12vw;}
+}
+
+
 
 
 
