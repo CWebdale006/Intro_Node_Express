@@ -151,13 +151,23 @@ async function searchFunction() {
             cardBody.setAttribute("class", "card-body");
 
             // making the card-body div 
-                // making the div to contain the sprite div 
+                // making the div to contain the pokeball div 
                 let halfDiv1 = document.createElement("div");
-                halfDiv1.setAttribute("class", "col-1-2");
-                    //making the sprite div 
+                halfDiv1.setAttribute("class", "col-1-1");
+                    //making the pokeball + sprite div
+                    let pokeballDiv = document.createElement("div");
+                    pokeballDiv.setAttribute("id", "openBall");
+                    pokeballDiv.setAttribute("class", "col-1-1");
+                    pokeballDiv.setAttribute("align", "center");
+                    // adding the pokeball 
+                    pokeballDiv.innerHTML = '<img src="https://i.pinimg.com/originals/95/fc/30/95fc304b40461a9922bd1d3aff885496.png" alt="open pokeball">';
+
+                    // making the div to contain the sprite div 
                     let spriteDiv = document.createElement("div");
                     spriteDiv.setAttribute("id", "sprite");
                     spriteDiv.setAttribute("align", "center");
+                // appending the pokeball div into its contining div 
+                halfDiv1.appendChild(pokeballDiv);
                 // appending the sprite div into its containing div 
                 halfDiv1.appendChild(spriteDiv);
                 // appending the containing div to the card-body div 
@@ -165,7 +175,7 @@ async function searchFunction() {
 
                 //making the div to contain the pokemon name and type
                 let halfDiv2 = document.createElement("div");
-                halfDiv2.setAttribute("class", "col-1-2");
+                halfDiv2.setAttribute("class", "col-1-1");
                 halfDiv2.setAttribute("id", "text");
                     //making the h5
                     let h5Elem = document.createElement("h5");

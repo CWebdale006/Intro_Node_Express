@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+/*centering the pokeball on the home page*/
+#shutBall {
+  margin: 0 auto; 
+}
+
+
 /* Increasing font size, more readable*/
 .card-title {
     font-size: 20px;
@@ -11,13 +17,8 @@
 /* Adding a round border to make it look like a pokemon card */
 .card {
     border-radius: 10px;
-    height: 325px;
+    height: 100%;
     width: 30vw;
-}
-
-/* Makes images take up less of the page */
-img {
-    width: 10vw;
 }
 
 /* Sets up the styles for our divs, and columns to put the image next to the pokemon name/type. */
@@ -34,10 +35,6 @@ img {
 .col-1-1 {
     width: 100%;
     float: left;
-}
-
-#logo {
-    width: 20vw;
 }
 
 #search {
@@ -66,6 +63,29 @@ img {
 
 }
 
+/*Changes the default image width */
+img {
+  width: 20vw;
+}
+
+/*changes the size of the pokemon sprites*/
+#sprite img{
+  width: 12vw;
+}
+
+/* Layering the pokemon sprite and the open pokeball*/
+#openBall {
+  position: relative;
+}
+
+#sprite {
+  position: absolute;
+  left: 9vw;
+  top: 6.5vw;
+}
+
+
+
 /* Media query for a screen bigger than 1000 pixels */
 @media only screen and (max-width: 1000px) {
     .col-1-2 {
@@ -73,18 +93,33 @@ img {
     }
     
     #logo {
-      width: 100%;
+      width: 35vw;
     }
-      img {
-        width: 100%;
-      }
+
+    #shutBall {
+      margin: 0 auto; 
+    }
+
+    #sprite {
+      position: absolute;
+      left: 10vw;
+      top: 12vw;
+    }
+
+    #sprite img{
+      width: 30vw;
+    }
+
+    img {
+      width: 45vw;
+    }
+
     .card {
       width: 50vw;
       float: left;
-      height: 50vw;
+      height: 100%;
       border-radius: 0px;
     }
-    
   }
   
   /* Media query for a screen bigger than 750 pixels but smaller than 1000 */
@@ -94,17 +129,31 @@ img {
     }
   
     #logo {
-      width: 100%;
+      width: 40vw;
+    }
+
+    #shutBall {
+      margin: 0 auto; 
+    }
+
+    #sprite {
+      position: absolute;
+      left: 25vw;
+      top: 8vw;
+    }
+
+    #sprite img{
+      width: 25vw;
     }
   
     img {
-      width: 100%;
+      width: 35vw;
     }
   
     .card {
       width: 75vw;
       float: left;
-      height: 100vh;
+      height: 100%;
       border-radius: 0px;
     }
   }
@@ -116,7 +165,21 @@ img {
     }
   
     #logo {
-      width: 100%;
+      width: 50vw;
+    }
+
+    #shutBall {
+      margin: 0 auto; 
+    }
+
+    #sprite {
+      position: absolute;
+      left: 22.5vw;
+      top: 28vw;
+    }
+
+    #sprite img{
+      width: 50vw;
     }
   
     img {
