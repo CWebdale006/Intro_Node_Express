@@ -3,20 +3,20 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title Pokemon!
+  title Api Home
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
   link(rel='stylesheet' href='styles.css')
 .card
-  #sprite
-    img#logo(src='International_Pokémon_logo.svg.png' alt='pokemon logo')
+  #shutBall
+    img#logo(src='https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825891sbtn8.png' alt='pokeball')
   .card-body
     h5.card-title(align='center') Choose a pokemon, or enter your own!
     p(align='center')
     #buttons(align='center')
-      a.btn.btn-primary(href='/gible') Gible
-      a.btn.btn-primary(href='/cubone') Cubone
-      a.btn.btn-primary(href='/pikachu') Pikachu
-      a.btn.btn-primary(href='/squirtle') Squirtle
+      a.btn.btn-primary(href='gible.html') Gible
+      a.btn.btn-primary(href='cubone.html') Cubone
+      a.btn.btn-primary(href='pikachu.html') Pikachu
+      a.btn.btn-primary(href='squirtle.html') Squirtle
     #search.topnav(align='center')
       form(onsubmit='searchFunction(); return false')
         input#searchBar(type='text' placeholder='Search...')

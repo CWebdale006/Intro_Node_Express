@@ -71,26 +71,40 @@ img {
 /*changes the size of the pokemon sprites*/
 #sprite img{
   width: 12vw;
-  animation-name: exit;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  z-index: 3;
+  animation: pokeWidth 2s 1s;
 }
 
 /* Layering the pokemon sprite and the open pokeball*/
 #openBall {
   position: relative;
+  z-index: 2;
 }
 
 #sprite {
   position: absolute;
-  left: 9vw;
+  left: 50%;
+  margin-left: -6vw;
   top: 6.5vw;
+  animation: pokeMargin 2s 1s, pokeTop 2s 1s; 
 }
 
 /* creating the keyframe for the pokemon to "come out" of the pokeball */
-@keyframes exit {
-  from {width: 0vw}
-  to {width: 12vw;}
+@keyframes pokeWidth {
+  0% {width: 0vw}
+  100% {width: 12vw;}
+}
+@keyframes pokeMargin {
+  0% {margin-left: 0}
+  100% {margin-left: -6vw;}
+}
+@keyframes pokeTop {
+  0% {top: 13vw}
+  100% {top: 6.5vw}
+} 
+@keyframes pokeIndex {
+  from {z-index: 1}
+  to {z-index: 3;}
 }
 
 
