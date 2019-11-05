@@ -71,14 +71,14 @@ img {
 /*changes the size of the pokemon sprites*/
 #sprite img{
   width: 12vw;
-  z-index: 3;
-  animation: pokeWidth 2s 1s;
+  z-index: 1;
+  animation: pokeIndex 3s 0s, pokeWidth 2s 1s;
 }
 
 /* Layering the pokemon sprite and the open pokeball*/
 #openBall {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 #sprite {
@@ -103,8 +103,9 @@ img {
   100% {top: 6.5vw}
 } 
 @keyframes pokeIndex {
-  from {z-index: 1}
-  to {z-index: 3;}
+  0% {z-index: -1}
+  90% {z-index: -1}
+  100% {z-index: 1;}
 }
 
 
