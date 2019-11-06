@@ -19,6 +19,7 @@
     border-radius: 10px;
     height: 100%;
     width: 30vw;
+    z-index: 0;
 }
 
 /* Sets up the styles for our divs, and columns to put the image next to the pokemon name/type. */
@@ -68,26 +69,29 @@ img {
   width: 20vw;
 }
 
-/*changes the size of the pokemon sprites*/
-#sprite img{
-  width: 12vw;
+#sprite {
+  position: absolute;
+  left: 50%;
+  margin-left: -6vw;
+  top: 6.5vw;
   z-index: 1;
-  animation: pokeIndex 3s 0s, pokeWidth 2s 1s;
+  animation: pokeMargin 2s .9s, pokeTop 2s .9s, pokeIndex 1s linear 0s;
+}
+
+/*changes the size of the pokemon sprites*/
+#sprite img {
+  width: 12vw;
+  animation: pokeWidth 2s .9s;
 }
 
 /* Layering the pokemon sprite and the open pokeball*/
 #openBall {
   position: relative;
   z-index: 0;
+  
 }
 
-#sprite {
-  position: absolute;
-  left: 50%;
-  margin-left: -6vw;
-  top: 6.5vw;
-  animation: pokeMargin 2s 1s, pokeTop 2s 1s; 
-}
+
 
 /* creating the keyframe for the pokemon to "come out" of the pokeball */
 @keyframes pokeWidth {
@@ -100,11 +104,11 @@ img {
 }
 @keyframes pokeTop {
   0% {top: 13vw}
-  100% {top: 6.5vw}
+  100% {top: 6.5vw;}
 } 
 @keyframes pokeIndex {
-  0% {z-index: -1}
-  90% {z-index: -1}
+  0% {z-index: -2}
+  99% {z-index: -2}
   100% {z-index: 1;}
 }
 
