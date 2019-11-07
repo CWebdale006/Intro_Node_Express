@@ -87,10 +87,11 @@ img {
 #openBall {
   position: relative;
   z-index: 0;
-  
 }
 
-
+#openBall img {
+  animation: openBall 3s;
+}
 
 /* creating the keyframe for the pokemon to "come out" of the pokeball */
 @keyframes pokeWidth {
@@ -114,11 +115,11 @@ img {
 }
 
 /* Pokeball opening*/
-@keyframes open {
-  0% {content:src("https://www.freeiconspng.com/uploads/pokemon-png-4.png")}
-  20% {content:src("https://www.freeiconspng.com/uploads/pokemon-png-4.png")}
-  60% {content:src("")}
-  100% {content:src("");}
+@keyframes openBall {
+  0% {content:src("closedBall.png")}
+  20% {content:src("closedBall.png")}
+  60% {content:src("openBall.png")}
+  100% {content:src("openBall.png");}
 }
 
 
