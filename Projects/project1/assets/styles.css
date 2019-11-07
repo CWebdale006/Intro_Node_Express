@@ -19,7 +19,6 @@
     border-radius: 10px;
     height: 100%;
     width: 30vw;
-    z-index: 0;
 }
 
 /* Sets up the styles for our divs, and columns to put the image next to the pokemon name/type. */
@@ -75,13 +74,13 @@ img {
   margin-left: -6vw;
   top: 6.5vw;
   z-index: 1;
-  animation: pokeMargin 2s .9s, pokeTop 2s .9s, pokeIndex 1s linear 0s;
+  animation: pokeMargin 2s, pokeTop 2s, pokeOpac 2s;
 }
 
 /*changes the size of the pokemon sprites*/
 #sprite img {
   width: 12vw;
-  animation: pokeWidth 2s .9s;
+  animation: pokeWidth 2s;
 }
 
 /* Layering the pokemon sprite and the open pokeball*/
@@ -106,10 +105,20 @@ img {
   0% {top: 13vw}
   100% {top: 6.5vw;}
 } 
-@keyframes pokeIndex {
-  0% {z-index: -2}
-  99% {z-index: -2}
-  100% {z-index: 1;}
+@keyframes pokeOpac {
+  0% {opacity: 0}
+  30% {opacity: .1}
+  40% {opacity: .3}
+  50% {opacity: .7}
+  100% {opacity: 1;}
+}
+
+/* Pokeball opening*/
+@keyframes open {
+  0% {content:src("https://www.freeiconspng.com/uploads/pokemon-png-4.png")}
+  20% {content:src("https://www.freeiconspng.com/uploads/pokemon-png-4.png")}
+  60% {content:src("")}
+  100% {content:src("");}
 }
 
 
