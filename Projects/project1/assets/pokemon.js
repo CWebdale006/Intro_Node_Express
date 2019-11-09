@@ -89,13 +89,13 @@ function writePokemon(pokemon) {
 
 // checking the URL, finding the pokemon, and running our function using that pokemon 
 setTimeout(function()  {
-    if (window.location.href.indexOf("gible") != -1) {
+    if (document.title.indexOf("Gible") != -1) {
         writePokemon("gible");
-    } else if (window.location.href.indexOf("cubone") != -1) {
+    } else if (document.title.indexOf("Cubone") != -1) {
         writePokemon("cubone");
-    } else if (window.location.href.indexOf("pikachu") != -1) {
+    } else if (document.title.indexOf("Pikachu") != -1) {
         writePokemon("pikachu");
-    } else if (window.location.href.indexOf("squirtle") != -1) {
+    } else if (document.title.indexOf("Squirtle") != -1) {
         writePokemon("squirtle");
     } else {
         

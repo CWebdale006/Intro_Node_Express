@@ -8,23 +8,23 @@ app.set("assets", "./assets")
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Pokemon!'})
+    res.render('index')
 });
 
 app.use('/gible', function (req, res) {
-    res.render('gibleP', {title: 'Gible'})
+    res.render('template', {title: 'Gible'})
 });
 
 app.use('/cubone', function (req, res) {
-    res.render('cuboneP', {title: 'Cubone'})
+    res.render('template', {title: 'Cubone'})
 });
 
 app.use('/pikachu', function (req, res) {
-    res.render('pikachuP', {title: 'Pikachu'})
+    res.render('template', {title: 'Pikachu'})
 });
 
 app.use('/squirtle', function (req, res) {
-    res.render('squirtleP', {title: 'Squirtle'})
+    res.render('template', {title: 'Squirtle'})
 });
 
 app.listen(port, () => console.log(`Successfully ran code`))
