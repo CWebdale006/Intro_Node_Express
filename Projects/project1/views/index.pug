@@ -7,16 +7,16 @@ head
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
   link(rel='stylesheet' href='styles.css')
 .card
-  #shutBall
-    img#logo(src='https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825891sbtn8.png' alt='pokeball')
-  .card-body
+  .card-body(align='center')
+    #shutBall
+      img#logo(src='closedBall.png' alt='pokeball')
     h5.card-title(align='center') Choose a pokemon, or enter your own!
     p(align='center')
     #buttons(align='center')
-      a.btn.btn-primary(href='gible.html') Gible
-      a.btn.btn-primary(href='cubone.html') Cubone
-      a.btn.btn-primary(href='pikachu.html') Pikachu
-      a.btn.btn-primary(href='squirtle.html') Squirtle
+      a.btn.btn-primary(href='/gible') Gible
+      a.btn.btn-primary(href='/cubone') Cubone
+      a.btn.btn-primary(href='/pikachu') Pikachu
+      a.btn.btn-primary(href='/squirtle') Squirtle
     #search.topnav(align='center')
       form(onsubmit='searchFunction(); return false')
         input#searchBar(type='text' placeholder='Search...')

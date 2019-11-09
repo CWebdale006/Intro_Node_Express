@@ -204,7 +204,10 @@ async function searchFunction() {
                     linkDiv.setAttribute("align", "center");
                     // making the back link 
                     let backLink = document.createElement("a");
-                    backLink.setAttribute("href", "home.html");
+                    // link to the homepage for express/node
+                    backLink.setAttribute("href", "/");
+                    // link to the homepage for running with live server
+                    // backLink.setAttribute("href", "home.html");
                     backLink.setAttribute("class", "btn btn-secondary");
                     backLink.innerText = "Back"
                     // appending the back link into its containing div
