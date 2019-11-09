@@ -88,20 +88,6 @@ function writePokemon(pokemon) {
 
 
 // checking the URL, finding the pokemon, and running our function using that pokemon 
-// window.onload = () => {
-//     if (window.location.href.indexOf("gible") != -1) {
-//         writePokemon("gible");
-//     } else if (window.location.href.indexOf("cubone") != -1) {
-//         writePokemon("cubone");
-//     } else if (window.location.href.indexOf("pikachu") != -1) {
-//         writePokemon("pikachu");
-//     } else if (window.location.href.indexOf("squirtle") != -1) {
-//         writePokemon("squirtle");
-//     } else {
-//        console.log("nothing has been clicked or typed");
-//     }
-// }
-
 setTimeout(function()  {
     if (window.location.href.indexOf("gible") != -1) {
         writePokemon("gible");
@@ -123,6 +109,25 @@ document.getElementById("submit").addEventListener("click", searchFunction, fals
 
 // this function runs when the submit button for the search bar is clicked
 async function searchFunction() {
+    // animation to "open" the pokeball
+    openAnimation = () => {
+        let pokeBall = document.getElementById("openBall").querySelector("img");
+        pokeBall.src = "openBall.png"
+    }
+
+    // animation to change opacity of the sprite until the pokeball is opened
+    spriteAnimation = () => {
+        let spriteImg = document.getElementById("sprite").querySelector("img");
+        spriteImg.style.opacity = 1; 
+    }
+
+    // starts after the page is loaded, for the 4 default buttons 
+    setTimeout(openAnimation, 100);
+
+    // shows the sprite once the pokeball is opened
+    setTimeout(spriteAnimation, 200);
+
+
     // sets this variable to the value of the input box, works with upercase letters and spaces 
     let userPoke = document.getElementById("searchBar").value.toLowerCase();
     userPoke = userPoke.replace(/\s+/g, '');
@@ -160,7 +165,7 @@ async function searchFunction() {
                     pokeballDiv.setAttribute("class", "col-1-1");
                     pokeballDiv.setAttribute("align", "center");
                     // adding the pokeball 
-                    pokeballDiv.innerHTML = '<img src="https://i.pinimg.com/originals/95/fc/30/95fc304b40461a9922bd1d3aff885496.png" alt="open pokeball">';
+                    pokeballDiv.innerHTML = '<img src="closedBall.png" alt="open pokeball">';
 
                     // making the div to contain the sprite div 
                     let spriteDiv = document.createElement("div");
@@ -231,5 +236,7 @@ async function searchFunction() {
         }
     }
 }
+
+
 
 // goes back to the home page when the back button on the keyboard is pressed 
